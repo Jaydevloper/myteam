@@ -1,0 +1,15 @@
+@mixin un-style ($addaptiv:flex) {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: $addaptiv;
+}
+@mixin media($media:450px) {
+    @media only  screen and (max-width:$media){
+        @content;
+    }
+}
+
+
+
+

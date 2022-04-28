@@ -1,0 +1,132 @@
+.meet-the-drecteros-list {
+    width: 100%;
+    @include un-style;
+    justify-content: center;
+    max-width: 1415px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    &::after{
+        display: block;
+        margin-right: -343px;
+        width: 96%;
+        height: 100px;
+        background-image: url(../../img/directors-bg-right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: calc(50% + 632px);
+        content: '';
+    }
+}
+.meet-the-drecteros-list__item {
+    position: relative;
+    z-index: 1;
+    padding: 35px 127px 56px 122px;
+    background-color: $state;
+    margin-right: 30px;
+    width: 446px;
+    min-height: 165px;
+    text-align: center;
+    &:nth-of-type(1){
+        margin-bottom: 76px;
+    }
+    &:nth-of-type(3){
+        margin-right: 0;
+        margin-bottom: 76px;
+    }
+    &:nth-of-type(2){
+        margin-bottom: 76px;
+    }
+    &:nth-of-type(6){
+        margin-right: 0;
+    }
+}
+.meet-the-drecteros-list__item-head {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: $rapture
+}
+.meet-the-drecteros-list__item-page {
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+}
+.meet-the-drecteros-list__item-img {
+    position: absolute;
+    z-index: 1;
+    left: 190px;
+    bottom: -28px;
+}
+.meet-the-drecteros-list__item-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+@include media(1595px){
+    .meet-the-drecteros-list{
+        &::after{
+            width: 70%;
+            background-position: calc(50% + 270px);
+        }
+    }
+}
+@include media(1094px){
+    .meet-the-drecteros-list{
+        &::after{
+            width: 64%;
+            background-position: calc(50% + 112px);
+        }
+    }
+    .meet-the-drecteros-list__item{
+        &:nth-last-of-type(3){
+            margin-bottom: 76px;
+        }
+        &:nth-last-of-type(4){
+            margin-right: 30px;
+        }
+        
+        &:last-child{
+            margin-right: 30px;
+        }
+    }
+}
+@include media(951px){
+    .meet-the-drecteros-list{
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            z-index: 1;
+            top: 101%;
+            width: 36%;
+            background-position: calc(50% + 8px);
+        }
+    }
+    .meet-the-drecteros-list__item{
+        &:nth-of-type(5){
+            margin-bottom: 76px;
+        }
+    }
+
+}
+@include media(530px){
+    .meet-the-drecteros-list{
+        &::after{
+            left: 270px;
+        }
+    }
+
+}
+@include media{
+    .meet-the-drecteros-list__item{
+        width: 279px;
+        padding: 32px 24px 56px 24px;
+    }
+    .meet-the-drecteros-list__item-img{
+        left: 110px;
+    }
+}
+
+

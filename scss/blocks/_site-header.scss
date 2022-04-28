@@ -1,0 +1,21 @@
+.site-header {
+    background-color:$mdinight;
+}
+.site-header__wrraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@include media(615px){
+    .site-header__wrraper{
+        padding-bottom: 10px;
+        flex-direction: column;
+    }
+}
+@include media{
+    .site-header__wrraper{
+        padding-top: 48px;
+        position: relative;
+        z-index: 1;
+    }
+}

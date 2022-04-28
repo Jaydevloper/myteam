@@ -1,0 +1,112 @@
+.site-main__section{
+    padding-top: 130px;
+    padding-bottom: 212px;
+    background-color: $mdinight;
+}
+.site-main__wrraper{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.site-main__head {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100px;
+}
+.site-main__page {
+    margin: 0;
+    width: 730px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    &::before{
+        margin-bottom: 40px;
+        display: block;
+        width: 50px;
+        border-top: 4px solid $coral; 
+        content: '';
+    }
+    &::after{
+        display: inline-block;
+        width: 140%;
+        height: 200px;
+        bottom: 0;
+        background-image: url(../../img/disk-red.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: calc(50% + 412px);
+        content: '';
+    }
+}
+@include media(1595px){
+    .site-main__page{
+        &::after{
+            width: 100%;
+            background-position: calc(50% + 314px);
+        }
+    }
+}
+@include media(934px){
+    .site-main__wrraper{
+        text-align: center;
+        flex-direction: column;
+    }
+    .site-main__page{
+        width: 603px;
+        margin: 0 auto;
+        &::after{
+            width: 70%;
+            background-position: calc(50% + 96px);
+        }
+    }
+}
+@include media(742px){
+    .site-main__page{
+        position: relative;
+        z-index: 1;
+        width: 547px;
+        margin: 0 auto;
+        &::after{
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            right: -91px;
+            width: 70%;
+            background-position: calc(50% + 58px);
+            transform: rotate(90deg);
+        }
+
+    }
+}
+@include media(550px){
+    .site-main__page{
+        width: 327px;
+        &::after{
+            right: -91px;
+            width: 70%;
+            background-position: calc(50% + 58px);
+        }
+
+    }
+
+}
+@include media{
+    .site-main__head{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .site-main__page{
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 28px;
+        &::after{
+            right: -68px;
+        }
+
+    }
+
+}
