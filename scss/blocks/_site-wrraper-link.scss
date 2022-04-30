@@ -17,7 +17,13 @@
     .site-wrraper-link{
         display: none;
         &--visual{
+            width: 161px;
+            position: absolute;
+            z-index: 1;
+            left: 39px;
             display: block;
+            color: #fff;
+            border-color: #fff;
             
         }
     }

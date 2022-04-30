@@ -20,6 +20,20 @@
         content: '';
     }
 }
+@include media(950px){
+    .our-clients__wrraper-head{
+        &::before{
+            background-position: calc(50% - 350px);
+        }
+    }
+}
+@include media (650px){
+    .our-clients__wrraper-head{
+        &::before{
+            background-position: calc(50% - 200px);
+        }
+    }
+}
 @include media{
     .our-clients__wrraper-head{
         font-weight: 700;

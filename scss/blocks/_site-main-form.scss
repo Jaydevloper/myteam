@@ -1,0 +1,71 @@
+.site-main-form {
+    position: relative;
+    z-index: 1;
+    @include un-style;
+    flex-direction: column;
+    z-index: 2;
+}
+.site-main-form__input{
+    background-color: transparent;
+    padding-bottom: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    &:not(:last-child){
+        margin-bottom: 24px;
+    }
+    &::placeholder{
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.115385px;
+        opacity: 0.6;
+    }
+}
+.site-main-form__input-page{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    color: $coral;
+}
+.site-main-form__input--fname:not(:focus):not(:placeholder-shown):invalid + .site-main-form__input-page--fname {
+    top: 28px;
+    display: block;
+}
+.site-main-form__input--email:not(:focus):not(:placeholder-shown):invalid + .site-main-form__input-page--email {
+    display: block;
+    top: 86px;
+}
+.site-main-form__input--cnmae:not(:focus):not(:placeholder-shown):invalid + .site-main-form__input-page--cname {
+    display: block;
+    top: 147px;
+}
+.site-main-form__input--title:not(:focus):not(:placeholder-shown):invalid + .site-main-form__input-page--title {
+    display: block;
+    top: 208px;
+}
+.site-main-form__textarea {
+    resize: none;
+}
+.site-main-form__submit {
+    width: 123px;
+    border: 2px solid #fff;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $depp;
+}
+@include media (813px){
+    .site-main-form{
+        width: 100%;
+        max-width: 542px;
+    }
+}
+@include media{
+    .site-main-form{
+        width: 100%;
+        max-width: 372px;
+    }
+}

@@ -2,8 +2,8 @@
     @include un-style;
     align-items: center;
     &--footer{
-        flex-direction: column;
-        align-items: flex-start;
+        margin-right: auto;
+        display: block;
     }
 }
 .site-wrraper-list__item {
@@ -14,9 +14,21 @@
     }
     &:nth-of-type(2){
         margin-left: 0;
+    } &:nth-of-type(3){
+        display: none;
     }
     &--footer{
         margin-left: 0;
+        &:nth-of-type(1){
+            margin-right: 0;
+        }
+        &:nth-of-type(2){
+            display: inline-block;
+        }
+        &:nth-of-type(3){
+            display: inline-block;
+            margin-left: 40px;
+        }
     }
 }
 .site-wrraper-list__item-link {
@@ -29,41 +41,53 @@
 .site-wrraper-list__item-link-img {
     display: block;
 }
-.site-wrraper-list__item-button{
+.site-wrraper-list__button{
     display: none;
 }
 @include media{
     .site-wrraper-list{
+        display: none;
         justify-content: space-between;
-        margin-right: auto;
         &--footer{
+            display: block;
             margin-left: auto;
             align-items: center;
         }
     }
     .site-wrraper-list__item{
         &:nth-of-type(3){
-            display: none;
-        }
-        &:nth-of-type(4){
-            display: none;
+           display: block;
         }
         &--footer{
-            &:nth-of-type(1){
-                margin-right: 0;
-            }
             &:nth-of-type(3){
-                display: block;
+                display: inline-block;
+                margin-left: 24px;
             }
         }
     }
-    .site-wrraper-list__item-button{
-        position: absolute;
-        z-index: 1;
-        bottom: 16px;
-        right: 0;
+    .site-wrraper-list__button{
+        width: 20px;
+        height: 17px;
+        background-image: url(../../img/burger.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
         display: block;
         border: none;
         background-color: transparent;
     }
+    .site-wrraper-list--open{
+        padding-top: 120px;
+        padding-bottom: 475px;
+        padding-left: 48px;
+        margin-left: auto;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 80px;
+        background-color: $police;
+
+    }
+    
+        
 }

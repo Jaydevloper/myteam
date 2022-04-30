@@ -2,6 +2,12 @@
     background-color:$mdinight;
 }
 .site-header__wrraper {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header__wrraper-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,5 +23,6 @@
         padding-top: 48px;
         position: relative;
         z-index: 1;
+        align-items: inherit;
     }
 }

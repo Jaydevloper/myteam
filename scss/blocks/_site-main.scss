@@ -1,7 +1,18 @@
 .site-main__section{
     padding-top: 130px;
-    padding-bottom: 212px;
     background-color: $mdinight;
+    &::after{
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        bottom: 0;
+        background-image: url(../../img/disk-red.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: calc(50% + 642px);
+        content: '';
+    }
+    
 }
 .site-main__wrraper{
     padding: 0;
@@ -27,69 +38,39 @@
         border-top: 4px solid $coral; 
         content: '';
     }
-    &::after{
-        display: inline-block;
-        width: 140%;
-        height: 200px;
-        bottom: 0;
-        background-image: url(../../img/disk-red.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: calc(50% + 412px);
-        content: '';
-    }
-}
-@include media(1595px){
-    .site-main__page{
-        &::after{
-            width: 100%;
-            background-position: calc(50% + 314px);
-        }
-    }
 }
 @include media(934px){
     .site-main__wrraper{
         text-align: center;
         flex-direction: column;
     }
-    .site-main__page{
-        width: 603px;
-        margin: 0 auto;
+    .site-main__section{
         &::after{
-            width: 70%;
-            background-position: calc(50% + 96px);
+            background-position: calc(50% + 364px);
         }
     }
 }
 @include media(742px){
+    .site-main__section{
+        &::after{
+            background-position: calc(50% + 228px);
+        }
+    }
     .site-main__page{
         position: relative;
         z-index: 1;
         width: 547px;
         margin: 0 auto;
-        &::after{
-            position: absolute;
-            z-index: 1;
-            top: 100%;
-            right: -91px;
-            width: 70%;
-            background-position: calc(50% + 58px);
-            transform: rotate(90deg);
-        }
-
     }
 }
 @include media(550px){
     .site-main__page{
         width: 327px;
-        &::after{
-            right: -91px;
-            width: 70%;
-            background-position: calc(50% + 58px);
-        }
-
     }
-
+    .site-main__section{
+        &::after{
+            background-position: calc(50% + 200px);
+        }
 }
 @include media{
     .site-main__head{
@@ -100,13 +81,23 @@
     }
     .site-main__page{
         text-align: center;
+        z-index: 0;
         font-weight: 600;
         font-size: 15px;
         line-height: 28px;
-        &::after{
-            right: -68px;
-        }
-
     }
+    .site-main__section{
+        &::after{
+            background-position: calc(50% + 140px);
+        }
+}
+@include media (312px){
+    .site-main__page{
+        &::after{
+            display: none;
+        }
+    }
+}
 
+}
 }

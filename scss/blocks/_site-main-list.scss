@@ -1,0 +1,105 @@
+.site-main-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.site-main-list__item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color:#fff
+}
+.site-main-list__item-page--img-1 {
+    &::before{
+        margin-right: 23px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(../../img/network.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: '';
+    }
+}
+.site-main-list__item-page--img-2 {
+    &::before{
+        margin-right: 23px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(../../img/network.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: '';
+    }
+}
+.site-main-list__item-page--img-3 {
+    &::before{
+        margin-right: 23px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        background-image: url(../../img/network.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: '';
+    }
+}
+@include media (813px){
+    .site-main-list{
+        margin: 0 auto;
+    }
+}
+@include media{
+    .site-main-list__item{
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        
+    }
+    .site-main-list__item-page--img-1{
+        width: 232px;
+        
+        margin-left: 80px;
+        &::before{
+            position: absolute;
+            z-index: 1;
+            left: -4px;
+            top: -15px;
+            display: block;
+        }
+    }
+    .site-main-list__item-page--img-2{
+        width: 232px;
+       
+        margin-left: 80px;
+        &::before{
+            position: absolute;
+            z-index: 1;
+            left: -4px;
+            top: -15px;
+            display: block;
+        }
+    }
+    .site-main-list__item-page--img-3{
+        width: 232px;
+        
+        margin-left: 80px;
+        &::before{
+            position: absolute;
+            z-index: 1;
+            left: -4px;
+            top: -15px;
+            display: block;
+        }
+    }
+}
