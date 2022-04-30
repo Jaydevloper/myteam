@@ -1442,6 +1442,7 @@ img {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #fff;
+  color: #fff;
 }
 
 .site-main-form__input:not(:last-child) {
@@ -1478,6 +1479,11 @@ img {
   line-height: 25px;
   letter-spacing: -0.115385px;
   opacity: 0.6;
+}
+
+.site-main-form__input:not(:focus):not(:placeholder-shown):invalid {
+  color: #F67E7E;
+  border-color: #F67E7E;
 }
 
 .site-main-form__input-page {
@@ -1518,6 +1524,7 @@ img {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  cursor: pointer;
   color: #004047;
 }
 

@@ -12,6 +12,7 @@
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #fff;
+    color: #fff;
     &:not(:last-child){
         margin-bottom: 24px;
     }
@@ -22,6 +23,11 @@
         letter-spacing: -0.115385px;
         opacity: 0.6;
     }
+}
+.site-main-form__input:not(:focus):not(:placeholder-shown):invalid{
+    color: $coral;
+    border-color: $coral;
+    
 }
 .site-main-form__input-page{
     position: absolute;
@@ -55,6 +61,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
+    cursor: pointer;
     color: $depp;
 }
 @include media (813px){
